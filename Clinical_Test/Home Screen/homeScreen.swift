@@ -70,7 +70,7 @@ struct HomeScreen: View {
     }
 
     private var searchTextField: some View {
-        TextField("🔍 Search patients...", text: $searchText)
+        TextField("\(Image(systemName: "magnifyingglass")) Search patients...", text: $searchText)
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(.trailing, 20)
     }

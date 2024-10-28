@@ -23,6 +23,7 @@ struct ClinicalTestScreen: View {
     @State private var selectedPatient: PatientRecord? = nil
 
     var body: some View {
+      
         NavigationStack {
             ZStack(alignment: .topLeading) {
                 Color(red: 136/255, green: 8/255, blue: 8/255)
@@ -35,10 +36,10 @@ struct ClinicalTestScreen: View {
                 .padding()
             }
             .onAppear { viewModel.fetchPatientData()
-                UINavigationBar.appearance().tintColor = .white}
+                let backButtonColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+                        UINavigationBar.appearance().tintColor = backButtonColor}
             .navigationBarTitle("")
-            .accentColor(.white) 
-            
+            .accentColor(Color(red: 255/255, green: 255/255, blue: 255/255))
             //            .navigationBarHidden(true)
            
         }
